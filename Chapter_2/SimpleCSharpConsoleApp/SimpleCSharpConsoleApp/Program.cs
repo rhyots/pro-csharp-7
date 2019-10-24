@@ -20,6 +20,18 @@ namespace SimpleCSharpConsoleApp
             Console.WriteLine("*************************************");
             Console.BackgroundColor = ConsoleColor.Black;
 
+            int number1 = 3000;
+            int number2 = 0;
+            try
+            {
+                Console.WriteLine(number1 / number2);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Catched Exception: Division of {0} by zero.", number1);
+            }
+
+
             // Wait for Enter key to be pressed.
             Console.ReadLine();
             MessageBox.Show("All done!");
